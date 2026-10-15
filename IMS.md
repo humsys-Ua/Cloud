@@ -183,10 +183,12 @@ pub fn check_metallurgy_thermal_interlock(magnet_water_temp: f32) {
         set_system_state(SystemState::EmergencyMagnetThermalCritical);
     } 
     else if magnet_water_temp >= WARNING_TEMP {
-        // Превентивне нарощування охолодження чиллера
+                // Превентивне нарощування охолодження чиллера
         unsafe { open_backup_cooling_valve(); }
     }
 }
+
+```
 
 ## ДОДАТОК А: АУДИТ ТА ВЕРИФІКАЦІЯ ДАНИХ (НАСТУПНІ КРОКИ)
 
